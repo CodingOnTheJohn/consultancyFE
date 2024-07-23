@@ -40,6 +40,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+<<<<<<< HEAD
 gem "faraday"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -63,6 +64,15 @@ end
 group :test do 
   # gem "webmock"	require "webmock/rails" in spec helper
   # gem "vcr"
+=======
+
+# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+# gem "image_processing", "~> 1.2"
+
+group :development, :test do
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[ mri windows ]
+>>>>>>> 4da5a37ac0cc5fb2dc974f32bfc25b9614815258
 end
 
 group :development do
