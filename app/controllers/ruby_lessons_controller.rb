@@ -4,6 +4,6 @@ class RubyLessonsController < ApplicationController
   end
 
   def show
-    @ruby_lesson = RubyLessonsFacade.new.detail
+    @ruby_lesson = RubyLessonsFacade.new.detail(params[:id])
   end
 end

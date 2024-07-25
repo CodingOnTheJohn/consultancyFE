@@ -8,7 +8,8 @@ class RubyLessonsFacade
     end
   end
 
-  def detail
-    LessonService.new.ruby_lesson_detail(params[:id])
+  def detail(id)
+    lesson = LessonService.new.ruby_lesson_detail(id.to_i)
+    RubyLesson.new(lesson)
   end
 end
