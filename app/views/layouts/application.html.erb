@@ -11,8 +11,8 @@
   </head>
 
   <body>
-    <% flash.each do |type, message| %>
-      <section class=<%= type %>>
+    <% flash.each do |name, message| %>
+      <section class=<%= name %>>
       <p><%= message %></p>
       </section>
     <% end %>

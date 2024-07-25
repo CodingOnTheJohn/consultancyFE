@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     new_user = User.new(user_params)
     if new_user.save
       session[:user_id] = new_user.id
-      flash[:success] = "Welcome #{new_user.username}! Please Log In"
+      flash[:success] = "Welcome #{new_user.username.split.map(&:capitalize).join(" ")}! Please Log In"
       redirect_to root_path
     else
       redirect_to new_user_path
