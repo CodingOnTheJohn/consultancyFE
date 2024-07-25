@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "Ruby Index" do
 # As a visitor,
-# When I visit '/ruby'
+# When I visit '/ruby_lessons'
 # I should see a list of ruby lessons by name
-# and each lesson's name is a link to their show page (ruby/:id)
+# and each lesson's name is a link to their show page (ruby_lessons/:id)
 
   describe "visit ruby index" do 
     it "should show a list of ruby lessons by name and link to their show page" do

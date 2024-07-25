@@ -16,7 +16,7 @@ class LessonService
     get_url("/api/v1/ruby")
   end
 
-  def ruby_detail(id)
+  def ruby_lesson_detail(id)
     get_url("/api/v1/ruby/#{id}")
   end
 end
