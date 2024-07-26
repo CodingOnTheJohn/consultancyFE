@@ -1,0 +1,6 @@
+<h1> JavaScript Lessons </h1>
+<% @javascript_lessons.each do |lesson| %>
+  <ul>
+    <li><%= link_to "#{lesson.id}", javascript_lesson_path(id: lesson.id) %></li>
+  </ul>
+<% end %>

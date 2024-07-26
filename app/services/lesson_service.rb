@@ -19,4 +19,20 @@ class LessonService
   def ruby_lesson_detail(id)
     get_url("/api/v1/ruby/#{id}")
   end
+
+  def all_javascript
+    get_url("/api/v1/javascript")
+  end
+
+  def javascript_lesson_detail(id)
+    get_url("/api/v1/javascript/#{id}")
+  end
+
+  def all_interview
+    get_url("/api/v1/interview")
+  end
+
+  def interview_lesson_detail(id)
+    get_url("/api/v1/interview/#{id}")
+  end
 end

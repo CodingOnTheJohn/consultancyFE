@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
   resources :ruby_lessons, only: [:index, :show]
+  resources :javascript_lessons, only: [:index, :show]
+  resources :interview_lessons, only: [:index, :show]
 end
