@@ -1,23 +1,24 @@
 class UsersController < ApplicationController
   def new
-    @user = User.new
+    # @user = User.new
   end
 
   def create
-    new_user = User.new(user_params)
-    if new_user.save
-      session[:user_id] = new_user.id
-      flash[:success] = "Welcome #{new_user.username.split.map(&:capitalize).join(" ")}! Please Log In"
+    @response = UserFacade.new.create_user(user_params)
+    require 'pry' ; binding.pry
+    if @response[:success]
+      flash[:success] = "Welcome #{response[:user][:username]}! Please Log In"
       redirect_to root_path
     else
-      redirect_to new_user_path
-      flash[:error] = "Sorry, your credentials are bad" #Test sad path
+      flash[:error] = "Sorry, your credentials are bad"
+      redirect_to new_user_path #need render but redirect to works
     end
+
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :email)
+    params.permit(:username, :password, :email, :password_confirmation)
   end
 end
