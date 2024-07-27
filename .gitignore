@@ -33,9 +33,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-<<<<<<< HEAD
-=======
 coverage
 .DS_Store
 
->>>>>>> origin/main

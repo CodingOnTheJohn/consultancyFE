@@ -1,0 +1,6 @@
+<h1> Interview Lessons </h1>
+<% @interview_lessons.each do |lesson| %>
+  <ul>
+    <li><%= link_to "#{lesson.id}", interview_lesson_path(id: lesson.id) %></li>
+  </ul>
+<% end %>
