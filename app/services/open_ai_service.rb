@@ -1,6 +1,6 @@
 require 'openai'
 
-class OpenaiService
+class OpenAiService
   OpenAI.configure do |config|
     config.access_token = Rails.application.credentials.OPEN_AI[:OPEN_AI_KEY]
   end

@@ -6,4 +6,8 @@ class JavascriptLessonsController < ApplicationController
   def show
     @javascript_lesson = JavascriptLessonsFacade.new.detail(params[:id])
   end
+
+  def get_ai_response
+    @response = OpenAiFacade.new.get_response(params[:id])
+  end
 end
