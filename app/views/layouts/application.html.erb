@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= render partial: "shared/nav" %>
     <% flash.each do |type, message| %>
       <section class=<%= type %>>
       <p><%= message %></p>

@@ -39,8 +39,17 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
-gem 'faraday'
+gem "bootsnap", require: false
+
+#Faraday
+gem "faraday"
+
+#Bootstrap
+gem 'bootstrap', '~> 5.3.3'
+
+# Use Sass to process CSS
+gem "sassc-rails"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
