@@ -1,0 +1,11 @@
+{
+  "data": {
+      "id": "1",
+      "type": "interview",
+      "attributes": {
+          "question": "Explain the following Data Types: String, Integer, Float, Boolean, Array, Hash",
+          "topic": "Data Types",
+          "link": "https://backend.turing.edu/module1/lessons/datatypes"
+      }
+  }
+}
