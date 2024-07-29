@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :ruby_lessons, only: [:index, :show]
   resources :javascript_lessons, only: [:index, :show]
   resources :interview_lessons, only: [:index, :show]
+  post "/openai" => "openai#tell_me_more", as: :openai
 end

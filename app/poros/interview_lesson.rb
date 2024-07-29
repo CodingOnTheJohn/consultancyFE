@@ -1,9 +1,9 @@
 class InterviewLesson
-  attr_reader :id, :question, :topic, :link
+  attr_reader :id, :lesson, :topic, :link
 
   def initialize(lesson)
     @id = lesson[:id]
-    @question = lesson[:attributes][:question]
+    @lesson = lesson[:attributes][:question]
     @topic = lesson[:attributes][:topic]
     @link = lesson[:attributes][:link]
   end
