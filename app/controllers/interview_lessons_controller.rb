@@ -4,7 +4,9 @@ class InterviewLessonsController < ApplicationController
   end
 
   def show
-    @interview_lesson = InterviewLessonsFacade.new.detail(params[:id])
+    @topic = "Interview Lesson"
+    @lesson = InterviewLessonsFacade.new.detail(params[:id])
+    render "shared/lesson_show"
   end
 
   def get_ai_response

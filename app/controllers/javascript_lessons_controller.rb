@@ -4,7 +4,9 @@ class JavascriptLessonsController < ApplicationController
   end
 
   def show
-    @javascript_lesson = JavascriptLessonsFacade.new.detail(params[:id])
+    @topic = "Javascript Lesson"
+    @lesson = JavascriptLessonsFacade.new.detail(params[:id])
+    render "shared/lesson_show"
   end
 
   def get_ai_response
