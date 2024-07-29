@@ -4,7 +4,9 @@ class RubyLessonsController < ApplicationController
   end
 
   def show
-    @ruby_lesson = RubyLessonsFacade.new.detail(params[:id])
+    @topic = "Ruby Lesson"
+    @lesson = RubyLessonsFacade.new.detail(params[:id])
+    render "shared/lesson_show"
   end
 
   def get_ai_response

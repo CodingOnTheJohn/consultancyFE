@@ -5,8 +5,8 @@ class OpenAiService
     config.access_token = Rails.application.credentials.OPEN_AI[:OPEN_AI_KEY]
   end
 
-  def tell_me_more(topic)
-    prompt = "Tell me more about #{topic}. please give me the response in json and only json format. do not include any other information. only a JSON object, do not put it in an array, in quotes or anything else.I want the json object to have the key data with only description nested under data"
+  def tell_me_more(lesson, topic)
+    prompt = "Tell me about #{lesson} as a small #{topic} like I know very little of the topic in under 250 words. please give me the response in json and only json format. do not include any other information. only a JSON object, do not put it in an array, in quotes or anything else.I want the json object to have the key data with only description nested under data"
     client = OpenAI::Client.new
     response = client.chat(
       parameters: {
