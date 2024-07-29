@@ -1,17 +1,15 @@
 class UsersController < ApplicationController
   def new
-    # @user = User.new
   end
 
   def create
-    @response = UserFacade.new.create_user(user_params)
-    binding.pry
-    if @response[:success]
-      flash[:success] = "Welcome #{response[:user][:username]}! Please Log In"
+    response = UserFacade.new.create_user(user_params)
+    if response[:id]
+      flash[:success] = "Welcome #{response[:attributes][:username]}! Please Log In"
       redirect_to root_path
     else
       flash[:error] = "Sorry, your credentials are bad"
-      redirect_to new_user_path #need render but redirect to works
+      redirect_to new_user_path
     end
 
   end
