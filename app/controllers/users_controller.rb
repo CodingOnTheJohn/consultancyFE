@@ -7,11 +7,15 @@ class UsersController < ApplicationController
     if response[:id]
       flash[:success] = "Welcome #{response[:attributes][:username]}! Please Log In"
       redirect_to root_path
+      #redirect_to user_login_path(response[:id].to_i)
     else
       flash[:error] = "Sorry, your credentials are bad"
       redirect_to new_user_path
     end
+  end
 
+  def login
+    # user.id = params["user_id"]
   end
 
   private

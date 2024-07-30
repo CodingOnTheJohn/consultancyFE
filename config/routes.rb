@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "welcome#index"
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create] do
+    get "/login", to: "users#login", as: "login"
+    get "/dashboard", to: "users#dashboard"
+  end
+
   resources :ruby_lessons, only: [:index, :show]
   resources :javascript_lessons, only: [:index, :show]
   resources :interview_lessons, only: [:index, :show]
