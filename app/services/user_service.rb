@@ -9,11 +9,9 @@ class UserService
   end
 
   def oauth
-    binding.pry
     response = Faraday.get("https://coding-on-the-john-be-e2b03178993f.herokuapp.com/api/v1/auth/github") do |request|
     end
     json = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
     json[:data]
   end
 end

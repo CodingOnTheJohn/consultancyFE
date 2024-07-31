@@ -25,7 +25,6 @@ class UsersController < ApplicationController
   end
 
   def oauth
-    binding.pry
     response = UserFacade.new.oauth
     if response[:id]
       session[:user_id] = response[:id]

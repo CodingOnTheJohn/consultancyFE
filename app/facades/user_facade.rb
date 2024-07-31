@@ -4,7 +4,6 @@ class UserFacade
   end
 
   def oauth
-    binding.pry
     UserService.new.oauth
   end
 end
