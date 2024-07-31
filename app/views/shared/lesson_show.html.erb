@@ -5,8 +5,12 @@
 <p>Link: <%= link_to "More Info", @lesson.link, target: '_blank' %></p>
 
 <div class="openai-responder">
-  <%= button_to "Tell Me More", openai_path, params: {lesson: @lesson.topic, topic: @topic}, method: :post,
-    data: { turbo_frame: "openai-response" } %>
+  <div class="openai-button">
+    <%= turbo_frame_tag "tell-me-more-button" do %>
+      <%= button_to "Tell Me More", openai_path, params: {lesson: @lesson.topic, topic: @topic}, method: :post,
+        data: { turbo_frame: "openai-response" } %>
+    <% end %>
+  </div>
 
   <div class="openai-container">
     <%= turbo_frame_tag "openai-response" do %>
