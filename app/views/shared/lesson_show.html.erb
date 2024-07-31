@@ -1,15 +1,21 @@
-<h1><%= @topic %></h1>
+<div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-11 col-lg-10 col-xl-10">
 
-<p>Topic: <%= @lesson.topic %></p>
-<p>Lesson: <%= @lesson.lesson %></p>
-<p>Link: <%= link_to "More Info", @lesson.link, target: '_blank' %></p>
+    <h5 class="mt-3"><%= @topic %></h5>
 
-<div class="openai-responder">
-  <%= button_to "Tell Me More", openai_path, params: {lesson: @lesson.topic, topic: @topic}, method: :post,
-    data: { turbo_frame: "openai-response" } %>
+    <p class="mt-3"><strong>Topic:</strong> <%= @lesson.topic %></p>
+    <p class="mt-3"><strong>Lesson:</strong> <%= @lesson.lesson %></p>
+    <p class="mt-3"><strong>Link:</strong> <%= link_to "More Info", @lesson.link, target: '_blank' %></p>
 
-  <div class="openai-container">
-    <%= turbo_frame_tag "openai-response" do %>
-    <% end %>
+    <div class="openai-responder mt-3">
+      <%= button_to "ChatGPT, tell me more ", openai_path, params: {lesson: @lesson.topic, topic: @topic}, method: :post,
+        data: { turbo_frame: "openai-response" } %>
+
+      <div class="openai-container">
+        <%= turbo_frame_tag "openai-response" do %>
+        <% end %>
+      </div>
+    </div>
+    
   </div>
 </div>

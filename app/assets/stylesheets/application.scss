@@ -16,41 +16,84 @@
 
  @import 'bootstrap';
 
-//  .container {
-//   width: 1000px;
-//   margin:auto;
-//   margin-top:50px;
-//  }
+ .navbar-custom {
+  background-color: #63b0e0;
+  // background-color: #2c358c;
+}
 
-//  header {
-//   background: ##4e8bc0;
-//  }
+ .navbar-brand h3 {
+  font-family: 'YourFontFamily', Quantico;
+  color: #FFFFFF;
+}
 
-//  header::after {
-//   content: ' ';
-//   display: table;
-//   clear: both;
-//  }
+.navbar-nav .nav-link {
+  font-family: 'YourFontFamily', sans-serif;
+  color: #FFFFFF;
+}
 
-//  nav ul {
-//   margin: 0;
-//   padding: 0;
-//   list-stlye: none;
-// }
+.navbar-nav .nav-link.active {
+  color: #FFFFFF;
+}
 
-// nav li {
-//   display: inline-block;
-//   margin-left: 70px;
-//   padding-top: 35px;
-// }
+.navbar-nav .nav-link:hover {
+  color: #e8aa43;
+}
 
-// nav a {
-//   color: #444
-//   text-decoration: none;
-//   /* text-transform: uppercase; */
-//   font-size: 14px;
-// }
+.custom-btn1 {
+  background-color: #ee6826; // Set your desired button color
+  border-color: #601948; // Set your desired border color
+  color: #FFFFFF; // Set your desired text color
+}
 
-// nav a:hover{
-//   color: #000;
-// }
+.custom-btn1:hover {
+  background-color: #e8aa43; // Set your desired hover button color
+  border-color: #601948; // Set your desired hover border color
+  color: #FFFFFF; // Set your desired hover text color
+  
+}
+.custom-btn2 {
+  background-color: #e8aa43; // Set your desired button color
+  border-color: #601948; // Set your desired border color
+  color: #FFFFFF; // Set your desired text color
+}
+
+.custom-btn2:hover {
+  background-color: #ee6826; // Set your desired hover button color
+  border-color: #601948; // Set your desired hover border color
+  color: #FFFFFF; // Set your desired hover text color
+  
+}
+.custom-btn1 {
+  background-color: #ee6826; // Set your desired button color
+  border-color: #601948; // Set your desired border color
+  color: #FFFFFF; // Set your desired text color
+}
+
+.custom-btn:hover1 {
+  background-color: #e8aa43; // Set your desired hover button color
+  border-color: #601948; // Set your desired hover border color
+  color: #FFFFFF; // Set your desired hover text color
+  
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-row {
+  height: 20px; // Adjust the height as needed
+}
+
+.row-1 {
+  background-color: #e8aa43; // First row color
+}
+
+.row-2 {
+  background-color: #ee6826; // Second row color
+}
+
+.row-3 {
+  background-color: #601948; // Third row color
+}
