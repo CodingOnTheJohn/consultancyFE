@@ -5,4 +5,5 @@
   <%= link_to "Sign Up", new_user_path %>
 <% end %>
 
-<%= link_to "Login with GitHub", oauth_path %>
+<%= link_to "Login with Github",
+"https://github.com/login/oauth/authorize?client_id=#{Rails.application.credentials.github[:client_id]}&scope=repo", data: { turbo: false } %>
