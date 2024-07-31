@@ -2,6 +2,7 @@
 require "simplecov"
 SimpleCov.start
 require 'spec_helper'
+require 'webmock/rspec'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
@@ -68,5 +69,6 @@ RSpec.configure do |config|
   VCR.configure do |config|
     config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
     config.hook_into :webmock
+    # config.configure_rspec_metadata!
   end
 end

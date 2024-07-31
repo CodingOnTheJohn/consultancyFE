@@ -8,8 +8,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "welcome#index"
+  get "/login", to: "users#login", as: "login"
+  
+  resources :users, only: [:new, :create] do
+    get "/dashboard", to: "users#dashboard"
+  end
 
-  resources :users, only: [:new, :create]
   resources :ruby_lessons, only: [:index, :show]
   resources :javascript_lessons, only: [:index, :show]
   resources :interview_lessons, only: [:index, :show]
