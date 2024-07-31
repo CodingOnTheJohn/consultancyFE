@@ -2,12 +2,21 @@
 
 <%= form_with url: users_path, method: :post do |f| %>
   <%= f.label :username, "Username:" %>
-  <%= f.text_field :username %>
+  <%= f.text_field :username %><br>
+
   <%= f.label :email, "Email:" %>
-  <%= f.text_field :email %>
+  <%= f.text_field :email %><br>
+
+  <%= f.label :phone_number, "Phone Number" %>
+  <%= f.text_field :phone_number %>
+
+  <%= f.check_box :text_preference, as: :boolean, checked_value: 'true', unchecked_value: 'false' %>
+  <%= f.label :text_preferences, "Yes, you can text me reminders" %><br>
+
   <%= f.label :password, "Password" %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password %><br>
+
   <%= f.label :password_confirmation, "Password Confirmation" %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br>
   <%= f.submit "Create User" %>
 <% end %>

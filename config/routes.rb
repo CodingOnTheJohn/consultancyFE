@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "welcome#index"
-
+  get "/login", to: "users#login", as: "login"
+  
   resources :users, only: [:new, :create] do
-    get "/login", to: "users#login", as: "login"
     get "/dashboard", to: "users#dashboard"
   end
 

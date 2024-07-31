@@ -4,7 +4,9 @@ class UsersController < ApplicationController
 
   def create
     response = UserFacade.new.create_user(user_params)
+    # response =  {:id=>"12", :type=>"user", :attributes=>{:email=>"test4554@example.com", :username=>"acjtesting5"}}
     if response[:id]
+      session[:user_id] = response[:id]
       flash[:success] = "Welcome #{response[:attributes][:username]}! Please Log In"
       redirect_to root_path
       #redirect_to user_login_path(response[:id].to_i)
@@ -15,12 +17,19 @@ class UsersController < ApplicationController
   end
 
   def login
-    # user.id = params["user_id"]
+    @user_id = params["user_id"]
+    # session[:user_id] = response[:id].to_i
+
+    #flash messages
+    # redirect_to user_path(@user_id) # or whatever page we show snacks on
+  end
+
+  def dashboard
   end
 
   private
 
   def user_params
-    params.permit(:username, :password, :email, :password_confirmation)
+    params.permit(:username, :password, :phone_num, :email, :password_confirmation)
   end
 end
