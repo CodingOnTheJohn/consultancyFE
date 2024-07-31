@@ -45,14 +45,14 @@ class UsersController < ApplicationController
     user = JSON.parse(response.body, symbolize_names: true)
 
     response = Faraday.post('https://coding-on-the-john-be-e2b03178993f.herokuapp.com/api/v1/users/github_users', {
-      github_user: {
+      user: {
         username: user[:login],
         email: user[:email],
         password: user[:id],
-        uid: user[:id]
+        uid: user[:uid]
       }
     })
-
+    # binding.pry
     user = JSON.parse(response.body, symbolize_names: true)
 
     session[:user_id] = user[:data][:id]
