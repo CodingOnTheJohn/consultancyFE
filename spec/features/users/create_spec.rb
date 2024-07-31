@@ -25,7 +25,6 @@ RSpec.describe 'Create User', type: :feature do
         check :text_preference
         fill_in :password, with: password
         fill_in :password_confirmation, with: password_confirmation
-        save_and_open_page
         
         click_on "Create User"
         
