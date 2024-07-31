@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "welcome#index"
   get "/login", to: "users#login", as: "login"
+  get "/oauth", to: "users#oauth", as: 'oauth'
   
   resources :users, only: [:new, :create] do
     get "/dashboard", to: "users#dashboard"

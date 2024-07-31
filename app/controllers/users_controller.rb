@@ -24,6 +24,19 @@ class UsersController < ApplicationController
     # redirect_to user_path(@user_id) # or whatever page we show snacks on
   end
 
+  def oauth
+    binding.pry
+    response = UserFacade.new.oauth
+    if response[:id]
+      session[:user_id] = response[:id]
+      flash[:success] = "Welcome #{response[:attributes][:username]}! Please Log In"
+      redirect_to root_path
+    else
+      flash[:error] = "Sorry, your credentials are bad"
+      redirect_to new_user_path
+    end
+  end
+
   def dashboard
   end
 
