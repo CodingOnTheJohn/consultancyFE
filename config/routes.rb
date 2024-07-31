@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "welcome#index"
   get "/login", to: "users#login", as: "login"
-  get "/oauth", to: "users#oauth", as: 'oauth'
+  # get "/oauth", to: "users#oauth", as: 'oauth'
+  get "/auth/github/callback", to: "users#github_callback"
   
   resources :users, only: [:new, :create] do
     get "/dashboard", to: "users#dashboard"
