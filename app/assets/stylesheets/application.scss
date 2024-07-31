@@ -22,7 +22,7 @@
 }
 
  .navbar-brand h3 {
-  font-family: 'YourFontFamily', Quantico;
+  font-family: 'YourFontFamily', sans-serif;
   color: #FFFFFF;
 }
 
@@ -96,4 +96,11 @@
 
 .row-3 {
   background-color: #601948; // Third row color
+}
+
+.footer-text {
+  color: #63b0e0; // Custom text color
+  font-size: 20px; // Adjust font size as needed
+  font-family: 'YourFontFamily', sans-serif;
+  font-style: italic;
 }
