@@ -1,6 +1,7 @@
 class UserService
   def create_user(params)
     response = Faraday.post("http://localhost:5000/api/v1/users") do |request|
+      #update to Heroku endpoint
       request.headers["Content-Type"] = "application/json"
       request.body = { user: params }.to_json
     end
