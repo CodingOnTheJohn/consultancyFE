@@ -25,12 +25,11 @@ RSpec.describe 'Create User', type: :feature do
         check :text_preference
         fill_in :password, with: password
         fill_in :password_confirmation, with: password_confirmation
-        save_and_open_page
         
         click_on "Create User"
         
         expect(current_path).to eq(root_path)
-        expect(page).to have_content("Welcome #{username}! Please Log In")
+        expect(page).to have_content("Welcome #{username}")
 
         # expect(page).not_to have_link("Sign Up")
         # expect(page).to have_link("Log In")

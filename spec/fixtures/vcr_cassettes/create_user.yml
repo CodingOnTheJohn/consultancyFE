@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:5000/api/v1/users
+    uri: https://coding-on-the-john-be-e2b03178993f.herokuapp.com/api/v1/users
     body:
       encoding: UTF-8
       string: '{"user":{"username":"acjtesting5","password":"test","email":"test4554@example.com","password_confirmation":"test"}}'

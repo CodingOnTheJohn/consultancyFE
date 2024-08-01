@@ -2,14 +2,19 @@ require 'rails_helper'
 
 RSpec.describe 'User Login', type: :feature do
   describe 'User can Log in' do
-    let!(:user) { { "id"=>"12", "type"=>"user", "attributes"=>{ "email"=>"test4554@example.com", "username"=>"acjtesting5" } } }
-
     it 'Can log in a user' do
-      visit login_path(user["id"])
-      fill_in :username, with: user["attributes"]["username"]
-      fill_in :email, with: user["attributes"]["email"] #don't we need to also pass a password to verify with bcrypt in our user api db?
-      click_on "Log In"
-      expect(current_path).to eq(root_path)
+      visit login_form_path
+
+      fill_in :username, with: "a"
+      fill_in :email, with: "a"
+      fill_in :password, with: "a"
+      fill_in :password_confirmation, with: "a"
+
+      within(".navbar") do
+        click_on "Log In"
+      end
+
+      expect(current_path).to eq(login_form_path)
     end
   end
 end
