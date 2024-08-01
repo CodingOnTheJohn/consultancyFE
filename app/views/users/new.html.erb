@@ -5,7 +5,6 @@
         <h4 class="mt-5 text-center">Create a New User</h4>
 
         <div class="row mt-4">
-          <!-- Sign Up Form -->
           <div class="col-md-7">
             <%= form_with url: users_path, method: :post do |f| %>
               <div class="mb-2">
@@ -38,7 +37,6 @@
             <% end %>
           </div>
 
-          <!-- GitHub Sign Up -->
           <div class="col-md-5 mb-4">
             <div class="d-flex flex-column justify-content-center h-100">
               <%= link_to "Sign up with Github", "https://github.com/login/oauth/authorize?client_id=#{Rails.application.credentials.github[:client_id]}&scope=repo", data: { turbo: false }, class: "btn custom-btn1 btn-lg" %>
