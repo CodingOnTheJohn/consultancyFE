@@ -5,7 +5,6 @@ RSpec.describe 'User Login', type: :feature do
     it 'Can log in a user' do
       visit login_form_path
 
-      fill_in :username, with: "a"
       fill_in :email, with: "a"
       fill_in :password, with: "a"
 
