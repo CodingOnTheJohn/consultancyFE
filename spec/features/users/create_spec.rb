@@ -31,8 +31,8 @@ RSpec.describe 'Create User', type: :feature do
         expect(current_path).to eq(root_path)
         expect(page).to have_content("Welcome #{username}")
 
-        # expect(page).not_to have_link("Sign Up")
-        # expect(page).to have_link("Log In")
+        expect(page).not_to have_link("Sign Up")
+        expect(page).not_to have_link("Log In")
       end
     end 
   end
