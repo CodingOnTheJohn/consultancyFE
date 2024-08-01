@@ -1,10 +1,4 @@
 class GithubService
-  def self.github_user(code)
-    access_token = fetch_github_token(code)
-    github_user = fetch_github_user(access_token)
-    create_github_user(github_user,github_user)
-  end
-
   def self.fetch_github_token(code)
         response = Faraday.post('https://github.com/login/oauth/access_token', {
       client_id: Rails.application.credentials.github[:client_id],
@@ -38,6 +32,7 @@ class GithubService
 
     JSON.parse(response.body, symbolize_names: true)
   end
+# --------------------- Old Logic incase something bad happens ---------------------
 
   # def self.github_auth
     #   response = Faraday.post('https://github.com/login/oauth/access_token', {
