@@ -16,15 +16,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def login_form
+
+  end
+
   def login
+    response = UserFacade.new.login(user_params)
+
     @user_id = params["user_id"]
-    # session[:user_id] = response[:id].to_i
+    session[:user_id] = response[:id]
+    flash[:success] = "Welcome #{response[:attributes][:username]}! Please Log In"
+    redirect_to root_path
 
     #flash messages
     # redirect_to user_path(@user_id) # or whatever page we show snacks on
   end
 
-  def dashboard
+  def logout
+    session.delete :user_id
+    redirect_to root_path
+    flash[:success] = "Logged out Successfully"
   end
 
   def github_callback

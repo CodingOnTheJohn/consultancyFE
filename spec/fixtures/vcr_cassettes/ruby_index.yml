@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 29 Jul 2024 18:33:06 GMT
+      - Thu, 01 Aug 2024 03:40:49 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722277987&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=8uhf1QWGMCdTOs9xxbO0FDpmVYLYH0LJHi5fUFI6%2FdI%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722483650&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=00ViVIPt%2BsUb3Ic8s%2FQCnRpusfjBdX%2Bgx5SUEhQNWFI%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1722277987&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=8uhf1QWGMCdTOs9xxbO0FDpmVYLYH0LJHi5fUFI6%2FdI%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1722483650&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=00ViVIPt%2BsUb3Ic8s%2FQCnRpusfjBdX%2Bgx5SUEhQNWFI%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -49,9 +49,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 57e889c9-4bb0-453a-b6f9-5a043d110a26
+      - 31a3398f-57cb-4f4e-8276-5d117dc5645b
       X-Runtime:
-      - '0.040582'
+      - '0.003128'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
@@ -82,7 +82,7 @@ http_interactions:
         = {name: ''Alice'', age: 30}\n  hash.each do |key, value|\n    puts key\n    puts
         value\n  end\n  the line ''puts key'' will output the key and ''puts value''
         will output the value for each key-value pair in the hash.","topic":"iterating","link":"https://ruby-doc.org/core-2.7.0/Enumerable.html#method-i-each"}}]}'
-  recorded_at: Mon, 29 Jul 2024 18:33:07 GMT
+  recorded_at: Thu, 01 Aug 2024 03:40:50 GMT
 - request:
     method: get
     uri: https://codinglessons-112e8fb1f399.herokuapp.com/api/v1/ruby/1
@@ -104,11 +104,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 29 Jul 2024 18:33:08 GMT
+      - Thu, 01 Aug 2024 03:40:50 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722277988&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=BKCZ48hQSn%2FbOFTpjxtA0JEJSv7yxjtIloQqFvKCy0o%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722483650&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=00ViVIPt%2BsUb3Ic8s%2FQCnRpusfjBdX%2Bgx5SUEhQNWFI%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1722277988&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=BKCZ48hQSn%2FbOFTpjxtA0JEJSv7yxjtIloQqFvKCy0o%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1722483650&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=00ViVIPt%2BsUb3Ic8s%2FQCnRpusfjBdX%2Bgx5SUEhQNWFI%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -132,9 +132,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1dd92e2a-b8da-48bc-a906-aabd3b4308a4
+      - c29d65cf-ae0b-49e3-a24c-1237fbac6606
       X-Runtime:
-      - '0.004870'
+      - '0.034904'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
@@ -151,5 +151,5 @@ http_interactions:
         fruits[1]  # Outputs ''banana''\n  puts fruits[2]  # Outputs ''cherry''\n\n  #
         Adding an element\n  fruits \u003c\u003c ''date''\n  puts fruits     # Outputs
         [''apple'', ''banana'', ''cherry'', ''date'']","topic":"Data Types","link":"https://ruby-doc.org/core-2.7.0/Array.html"}}}'
-  recorded_at: Mon, 29 Jul 2024 18:33:08 GMT
+  recorded_at: Thu, 01 Aug 2024 03:40:50 GMT
 recorded_with: VCR 6.2.0

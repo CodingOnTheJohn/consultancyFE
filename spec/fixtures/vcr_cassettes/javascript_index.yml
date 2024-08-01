@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 29 Jul 2024 18:30:32 GMT
+      - Thu, 01 Aug 2024 03:40:48 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722277833&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=pGoz3m9LePOfCoiW%2FC8VufUkhK2BDKYn8doZrAJLYVQ%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722483649&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=WVEL%2Bw1EhDuOcwzKy1zE1JFho6aP2zE8b5y5mqOcJ18%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1722277833&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=pGoz3m9LePOfCoiW%2FC8VufUkhK2BDKYn8doZrAJLYVQ%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1722483649&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=WVEL%2Bw1EhDuOcwzKy1zE1JFho6aP2zE8b5y5mqOcJ18%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -49,9 +49,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 52dbedcd-2cd1-40db-ae90-15bbfcb615d3
+      - 7bbaca94-96ec-4fa3-8c37-750c18efce21
       X-Runtime:
-      - '0.035517'
+      - '0.034906'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
@@ -82,7 +82,7 @@ http_interactions:
         than 5.'');\n  }\n  Conditions are checked in order, and the first true condition
         executes its block.\n  === checks for strict equality, \u003e and \u003c for
         greater or lesser comparisons.","topic":"Conditional Logic","link":"https://www.example.com/javascript_lessons/1"}}]}'
-  recorded_at: Mon, 29 Jul 2024 18:30:33 GMT
+  recorded_at: Thu, 01 Aug 2024 03:40:49 GMT
 - request:
     method: get
     uri: https://codinglessons-112e8fb1f399.herokuapp.com/api/v1/javascript/1
@@ -104,11 +104,11 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 29 Jul 2024 18:30:34 GMT
+      - Thu, 01 Aug 2024 03:40:49 GMT
       Report-To:
-      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722277835&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=4TI1yH%2BGX919fENejHO6ycy012SbufXw5OsBrvx%2FXzI%3D"}]}'
+      - '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1722483649&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=WVEL%2Bw1EhDuOcwzKy1zE1JFho6aP2zE8b5y5mqOcJ18%3D"}]}'
       Reporting-Endpoints:
-      - heroku-nel=https://nel.heroku.com/reports?ts=1722277835&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=4TI1yH%2BGX919fENejHO6ycy012SbufXw5OsBrvx%2FXzI%3D
+      - heroku-nel=https://nel.heroku.com/reports?ts=1722483649&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=WVEL%2Bw1EhDuOcwzKy1zE1JFho6aP2zE8b5y5mqOcJ18%3D
       Nel:
       - '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}'
       Connection:
@@ -132,9 +132,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 05bc3823-074d-466f-a49d-dec804d38256
+      - e34df463-82bc-4dda-8998-3f213f2f7d7c
       X-Runtime:
-      - '0.005241'
+      - '0.004087'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Content-Length:
@@ -152,5 +152,5 @@ http_interactions:
         ''Alice''\n    console.log(person[''age'']); // 30\n    To add or update a
         property, you can simply assign a value to it.\n    person.city = ''New York'';
         // Add a new property\n    person.age = 31; // Update an existing property","topic":"Objects","link":"https://www.example.com/javascript_lessons/1"}}}'
-  recorded_at: Mon, 29 Jul 2024 18:30:34 GMT
+  recorded_at: Thu, 01 Aug 2024 03:40:49 GMT
 recorded_with: VCR 6.2.0

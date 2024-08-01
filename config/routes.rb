@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/auth/github/callback", to: "users#github_callback"
   
   resources :users, only: [:new, :create] do
+    delete "/logout", to: "users#logout"
     get "/dashboard", to: "users#dashboard"
   end
 
