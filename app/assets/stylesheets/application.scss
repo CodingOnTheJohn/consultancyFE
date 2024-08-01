@@ -49,7 +49,7 @@
   background-color: #e8aa43; // Set your desired hover button color
   border-color: #601948; // Set your desired hover border color
   color: #FFFFFF; // Set your desired hover text color
-  
+
 }
 .custom-btn2 {
   background-color: #e8aa43; // Set your desired button color
@@ -61,7 +61,7 @@
   background-color: #ee6826; // Set your desired hover button color
   border-color: #601948; // Set your desired hover border color
   color: #FFFFFF; // Set your desired hover text color
-  
+
 }
 .custom-btn1 {
   background-color: #ee6826; // Set your desired button color
@@ -73,7 +73,7 @@
   background-color: #e8aa43; // Set your desired hover button color
   border-color: #601948; // Set your desired hover border color
   color: #FFFFFF; // Set your desired hover text color
-  
+
 }
 
 .body {
@@ -108,4 +108,17 @@
   font-size: 20px; // Adjust font size as needed
   font-family: 'YourFontFamily', sans-serif;
   font-style: italic;
+}
+
+.list-group-item {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.custom-badge {
+  background-color: #007bff;
+  color: white;
 }
