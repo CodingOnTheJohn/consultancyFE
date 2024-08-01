@@ -1,9 +1,7 @@
 <% if current_user %>
-  Logged in as: <%= current_user %>
+  <p>Logged in as: <%= current_user %></p>
   <%= button_to "Log out", user_logout_path([:user_id]), method: :delete %>
 <% else %>
-  <%= link_to "Sign Up", new_user_path %><br>
-  <%= link_to "Log In", login_path %><br>
   <%= link_to "Login with GitHub", oauth_path %>
 <% end %>
 

@@ -19,7 +19,7 @@
             <%= link_to "Interview Questions", interview_lessons_path, class: "nav-link active", aria: { current: "page" } %>
           </li>
         </ul>
-        <form class="">
+        <form class="form-inline my-2 my-lg-0">
           <% if current_user %>
             Logged in as: <%= current_user %>
             <%= button_to "Log out", user_logout_path(current_user), method: :delete, class: "btn custom-btn1 mr-2" %>
