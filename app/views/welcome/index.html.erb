@@ -1,4 +1,36 @@
-<% if current_user %>
-  <p>Logged in as: <%= @user.username %></p>
-  <%= button_to "Log out", logout_path, method: :delete %>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center text-center">
+    <div class="col-md-8">
+      <h1 class="display-1 mt-5 mb-3">CodeSnacks</h1>
+      <p class="lead mb-5">Bite-sized coding lessons to satisfy your learning appetite</p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <%= link_to "Sign Up", new_user_path, class: "btn custom-btn1 btn-lg btn-block" %>
+        </div>
+        <div class="col-md-4 mb-3">
+          <%= link_to "Log In", login_form_path, class: "btn custom-btn2 btn-lg btn-block" %>
+        </div>
+        <p class="lead mb-5">sign up or login to gain access to ai powered insights</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-4 text-center mb-4">
+      <h3>Ruby</h3>
+      <p>Master the elegant syntax of Ruby</p>
+      <%= link_to "Start Learning Ruby", ruby_lessons_path, class: "btn custom-btn1" %>
+    </div>
+    <div class="col-md-4 text-center mb-4">
+      <h3>JavaScript</h3>
+      <p>Dive into the world of interactive web development</p>
+      <%= link_to "Explore JavaScript", javascript_lessons_path, class: "btn custom-btn1" %>
+    </div>
+    <div class="col-md-4 text-center mb-4">
+      <h3>Interview Questions</h3>
+      <p>Prepare for your next coding interview</p>
+      <%= link_to "Practice Questions", interview_lessons_path, class: "btn custom-btn1" %>
+    </div>
+  </div>
+</div>

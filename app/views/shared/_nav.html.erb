@@ -1,34 +1,32 @@
-<div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-custom">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <h3>CodeSnacks</h3>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-             <%= link_to "Ruby", ruby_lessons_path, class: "nav-link active", aria: { current: "page" } %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "JavaScript", javascript_lessons_path, class: "nav-link active", aria: { current: "page" } %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Interview Questions", interview_lessons_path, class: "nav-link active", aria: { current: "page" } %>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <% if current_user %>
-            Logged in as: <%= @user.username %>
-            <%= link_to "Log out", logout_path, method: :delete, class: "btn custom-btn1 mr-2" %>
-          <% else %>
-            <%= link_to "Sign Up", new_user_path, class: "btn custom-btn1 mr-2" %>
-            <%= link_to "Log In", login_form_path, class: "btn custom-btn2" %>
-          <% end %>
-        </form>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-custom container-fluid">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <h3>CodeSnacks</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+           <%= link_to "Ruby", ruby_lessons_path, class: "nav-link active", aria: { current: "page" } %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "JavaScript", javascript_lessons_path, class: "nav-link active", aria: { current: "page" } %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Interview Questions", interview_lessons_path, class: "nav-link active", aria: { current: "page" } %>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <% if current_user %>
+          Logged in as: <%= @user.username %>
+          <%= link_to "Log out", logout_path, method: :delete, class: "btn custom-btn1 mr-2" %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_path, class: "btn custom-btn1 mr-2" %>
+          <%= link_to "Log In", login_form_path, class: "btn custom-btn2" %>
+        <% end %>
+      </form>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
