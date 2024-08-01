@@ -1,9 +1,11 @@
 class RubyLessonsController < ApplicationController
   def index
+    @user = UserFacade.new.get_user(session[:user_id]) if session[:user_id]
     @ruby_lessons = RubyLessonsFacade.new.all
   end
 
   def show
+    @user = UserFacade.new.get_user(session[:user_id]) if session[:user_id]
     @topic = "Ruby Lesson"
     @lesson = RubyLessonsFacade.new.detail(params[:id])
     render "shared/lesson_show"

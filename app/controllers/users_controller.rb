@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   def new
   end
 
+  def show
+    @user = UserFacade.new.get_user(params[:id])
+  end
+
   def create
     response = UserFacade.new.create_user(user_params)
     if response[:id]
