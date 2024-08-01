@@ -13,8 +13,5 @@ class UserFacade
   def login(params)
     UserService.new.login(params)
   end
-
-  def oauth
-    UserService.new.oauth
-  end
 end
+

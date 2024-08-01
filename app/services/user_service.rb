@@ -16,13 +16,6 @@ class UserService
     conn.get("/api/v1/users/#{id}")
   end
 
-  def oauth
-    response = conn.get("/api/v1/auth/github") do |request|
-    end
-    json = JSON.parse(response.body, symbolize_names: true)
-    json[:data]
-  end
-
   def login(params)
     response = conn.get("/api/v1/login") do |request|
       request.headers["Content-Type"] = "application/json"

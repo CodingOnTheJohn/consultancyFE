@@ -1,8 +1,10 @@
-<div class="container">
-  <div class="row justify-content-center text-center">
-    <div class="col-md-8">
-      <h1 class="display-1 mt-5 mb-3">CodeSnacks</h1>
-      <p class="lead mb-5">Bite-sized coding lessons to satisfy your learning appetite</p>
+<% if current_user %>
+  <p>Logged in as: <%= current_user %></p>
+  <%= button_to "Log out", user_logout_path([:user_id]), method: :delete %>
+<% else %>
+  <%= link_to "Login with Github",
+  "https://github.com/login/oauth/authorize?client_id=#{Rails.application.credentials.github[:client_id]}&scope=repo", data: { turbo: false } %>
+<% end %>
 
       <div class="row justify-content-center">
         <div class="col-md-4 mb-3">
