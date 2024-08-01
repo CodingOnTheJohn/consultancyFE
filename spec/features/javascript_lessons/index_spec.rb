@@ -5,14 +5,12 @@ RSpec.describe "Javascript Lessons Index" do
     VCR.use_cassette("javascript_index") do
       visit javascript_lessons_path
 
-      # expect(page).to have_content("Objects")
-      expect(page).to have_content("1")
+      expect(page).to have_content("Lesson 1")
 
-      # click_link "Objects"
-      click_link "1"
+      click_link "Lesson 1"
 
       expect(current_path).to eq(javascript_lesson_path(1))
-      expect(page).to have_content("Topic: Objects")
+      expect(page).to have_content("Objects are used to store")
     end
   end
 end
