@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create] do
     get "/dashboard", to: "users#dashboard"
-    # delete "/logout", to: "users#logout"
   end
 
   resources :ruby_lessons, only: [:index, :show]
