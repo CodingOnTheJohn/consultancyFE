@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/login_form", to: "users#login_form", as: "login_form"
   get "/login", to: "users#login", as: "login"
-  # get "/oauth", to: "users#oauth", as: 'oauth'
   get "/auth/github/callback", to: "users#github_callback"
   
   resources :users, only: [:new, :create] do
