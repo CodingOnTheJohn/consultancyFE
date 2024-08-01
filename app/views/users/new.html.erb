@@ -3,34 +3,40 @@
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
       <h4 class="mt-5 text-center"> Create a New User </h4>
 
-      <%= form_with url: users_path, method: :post, class: "mt-4" do |f| %>
-       <div class="mb-2">
-          <%= f.label :username, "Username:", class: "form-label" %>
-          <%= f.text_field :username, class: "form-control" %>
-        </div>
-        <div class="mb-2">
-        <%= f.label :email, "Email:", class: "form-label"  %>
-        <%= f.text_field :email, class: "form-control"  %>
-        </div>
-        <div class="mb-2">
-        <%= f.label :phone_number, "Phone Number", class: "form-label" %>
-        <%= f.text_field :phone_number %>
-        </div>  
-        <div class="mb-2">
-        <%= f.check_box :text_preference, as: :boolean, checked_value: 'true', unchecked_value: 'false' %>
-        <%= f.label :text_preferences, "Yes, you can text me reminders", class: "form-label" %><br>
-        </div>
-        <div class="mb-2">
-        <%= f.label :password, "Password:", class: "form-label"  %>
-        <%= f.password_field :password, class: "form-control"  %>
-        </div>
-        <div class="mb-2">
-        <%= f.label :password_confirmation, "Password Confirmation:", class: "form-label"  %>
-        <%= f.password_field :password_confirmation, class: "form-control"  %>
-         </div>
-        <div class="d-grid">
-        <%= f.submit "Create User", class: "btn custom-btn1 mr-2" %>
-        </div>
-      <% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+      <h4 class="mt-5 text-center"> Create a New User </h4>
+      <%= form_with url: users_path, method: :post, class: "mt-4", local: true do |f| %>
+  <div class="mb-2">
+    <%= f.label :username, "Username:", class: "form-label" %>
+    <%= f.text_field :username, class: "form-control", required: true, minlength: 3 %>
+    <%= f.error_message_on :username %>
   </div>
-</div>
+  <div class="mb-2">
+    <%= f.label :email, "Email:", class: "form-label" %>
+    <%= f.email_field :email, class: "form-control", required: true %>
+    <%= f.error_message_on :email %>
+  </div>
+  <div class="mb-2">
+    <%= f.label :phone_number, "Phone Number:", class: "form-label" %>
+    <%= f.telephone_field :phone_number, class: "form-control", pattern: "[0-9]{10}", placeholder: "1234567890" %>
+    <%= f.error_message_on :phone_number %>
+  </div>
+  <div class="mb-2">
+    <%= f.check_box :text_preference, as: :boolean, checked_value: 'true', unchecked_value: 'false' %>
+    <%= f.label :text_preference, "Yes, you can text me reminders", class: "form-label" %><br>
+  </div>
+  <div class="mb-2">
+    <%= f.label :password, "Password:", class: "form-label" %>
+    <%= f.password_field :password, class: "form-control", required: true, minlength: 6 %>
+    <%= f.error_message_on :password %>
+  </div>
+  <div class="mb-2">
+    <%= f.label :password_confirmation, "Password Confirmation:", class: "form-label" %>
+    <%= f.password_field :password_confirmation, class: "form-control", required: true, minlength: 6 %>
+  </div>
+  <div class="d-grid">
+    <%= f.submit "Create User", class: "btn custom-btn1" %>
+  </div>
+<% end %>
