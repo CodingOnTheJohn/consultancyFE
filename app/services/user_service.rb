@@ -13,10 +13,7 @@ class UserService
   end
 
   def get_user(id)
-    response = conn.get("/api/v1/users/#{id}") do |request|
-    end
-    json = JSON.parse(response.body, symbolize_names: true)
-    json[:data]
+    conn.get("/api/v1/users/#{id}")
   end
 
   def oauth
