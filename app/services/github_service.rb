@@ -20,7 +20,7 @@ class GithubService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.create_or_signin_github_user(github_user)
+  def self.create_or_signin_github_user(github_user, access_token)
     response = Faraday.post('https://coding-on-the-john-be-e2b03178993f.herokuapp.com/api/v1/github_users', {
       user: {
         username: github_user[:login],
