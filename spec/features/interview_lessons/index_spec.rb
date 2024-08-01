@@ -12,13 +12,11 @@ RSpec.describe "Interview Lessons Index" do
 
     visit interview_lessons_path
 
-    # expect(page).to have_content("Explain the following Data Types")
-    expect(page).to have_content("1")
+    expect(page).to have_content("Lesson 1")
 
-    # click_link "Explain the following Data Types"
-    click_link "1"
+    click_link "Lesson 1"
 
     expect(current_path).to eq(interview_lesson_path(1))
-    expect(page).to have_content("Topic: Data Types")
+    expect(page).to have_content("Explain the following Data Types")
   end
 end

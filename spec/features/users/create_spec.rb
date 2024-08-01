@@ -11,9 +11,12 @@ RSpec.describe 'Create User', type: :feature do
         password_confirmation = "test"
         
         visit root_path
+
         expect(page).to have_link("Sign Up")
 
-        click_on "Sign Up"
+        within(".navbar") do
+          click_on "Sign Up"
+        end
 
         expect(current_path).to eq(new_user_path)
         fill_in :username, with: username
@@ -33,7 +36,7 @@ RSpec.describe 'Create User', type: :feature do
       end
     end 
 
-
+    #Dana's ========================================
     # use Webmock for sad paths ?
     # describe "Sad Paths" do
     #   describe "username" do 
