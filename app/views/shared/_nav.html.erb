@@ -21,7 +21,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <% if current_user %>
-            Logged in as: <%= current_user %>
+            Logged in as: <%= @user.username %>
             <%= button_to "Log out", user_logout_path(current_user), method: :delete, class: "btn custom-btn1 mr-2" %>
           <% else %>
             <%= link_to "Sign Up", new_user_path, class: "btn custom-btn1 mr-2" %>
