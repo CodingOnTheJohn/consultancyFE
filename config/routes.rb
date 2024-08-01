@@ -10,11 +10,12 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "/login_form", to: "users#login_form", as: "login_form"
   get "/login", to: "users#login", as: "login"
+  delete "/logout", to: "users#logout", as: "logout"
   get "/auth/github/callback", to: "users#github_callback"
-  
+
   resources :users, only: [:new, :create] do
     get "/dashboard", to: "users#dashboard"
-    delete "/logout", to: "users#logout"
+    # delete "/logout", to: "users#logout"
   end
 
   resources :ruby_lessons, only: [:index, :show]

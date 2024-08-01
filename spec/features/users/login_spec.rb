@@ -8,7 +8,6 @@ RSpec.describe 'User Login', type: :feature do
       fill_in :username, with: "a"
       fill_in :email, with: "a"
       fill_in :password, with: "a"
-      fill_in :password_confirmation, with: "a"
 
       within(".navbar") do
         click_on "Log In"
