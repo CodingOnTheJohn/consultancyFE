@@ -44,11 +44,11 @@ class UsersController < ApplicationController
     })
     user = JSON.parse(response.body, symbolize_names: true)
 
-    response = Faraday.post('https://coding-on-the-john-be-e2b03178993f.herokuapp.com/api/v1/users/github_users', {
-      github_user: {
+    response = Faraday.post('https://coding-on-the-john-be-e2b03178993f.herokuapp.com/api/v1/github_users', {
+      user: {
         username: user[:login],
-        email: user[:email],
-        password: user[:id],
+        email: "#{user[:login]}@github.com",
+        password: access_token,
         uid: user[:id]
       }
     })
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     user = JSON.parse(response.body, symbolize_names: true)
 
     session[:user_id] = user[:data][:id]
-    flash[:success] = "Welcome #{response[:attributes][:username]}! Please Log In"
+    flash[:success] = "Welcome #{user[:data][:attributes][:username]}!"
     redirect_to root_path
   end
 
