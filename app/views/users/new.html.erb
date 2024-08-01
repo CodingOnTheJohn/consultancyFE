@@ -33,6 +33,9 @@
           <%= f.submit "Create User", class: "btn custom-btn1 mr-2" %>
           </div>
         <% end %>
+        <div class="d-grid mt-3">
+          <%= link_to "Sign up with Github", "https://github.com/login/oauth/authorize?client_id=#{Rails.application.credentials.github[:client_id]}&scope=repo", data: { turbo: false }, class: "btn custom-btn1 mr-2" %>
+        </div>
       </div>
     </div>
   </div>
