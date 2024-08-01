@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
   def github_callback
     user = GithubFacade.github_user(params[:code])
-    if user[:data][:id]
+    if user[:data] && user[:data][:id]
       session[:user_id] = user[:data][:id]
       flash[:success] = "Welcome #{user[:data][:attributes][:username]}!"
       redirect_to root_path
