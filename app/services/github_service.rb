@@ -1,9 +1,9 @@
 class GithubService
   def self.fetch_github_token(code)
-        response = Faraday.post('https://github.com/login/oauth/access_token', {
+      response = Faraday.post('https://github.com/login/oauth/access_token', {
       client_id: Rails.application.credentials.github[:client_id],
       client_secret: Rails.application.credentials.github[:client_secret],
-      code: @code
+      code: code
     }, {
       'Accept' => 'application/json'
     })
