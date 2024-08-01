@@ -21,12 +21,11 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <% if current_user %>
-            Logged in as: <%= current_user %>
-            <%= button_to "Log out", user_logout_path(current_user), method: :delete, class: "btn custom-btn1 mr-2" %>
+            Logged in as: <%= @user.username %>
+            <%= link_to "Log out", logout_path, method: :delete, class: "btn custom-btn1 mr-2" %>
           <% else %>
             <%= link_to "Sign Up", new_user_path, class: "btn custom-btn1 mr-2" %>
             <%= link_to "Log In", login_form_path, class: "btn custom-btn2" %>
-            <%= link_to "Login with GitHub", oauth_path, class: "btn custom-btn2" %>
           <% end %>
         </form>
       </div>

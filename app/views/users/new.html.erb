@@ -16,7 +16,7 @@
           <div class="mb-2">
           <%= f.label :phone_number, "Phone Number", class: "form-label" %>
           <%= f.text_field :phone_number, class: "form-control" %>
-          </div>  
+          </div>
           <div class="mb-4">
           <%= f.check_box :text_preference, as: :boolean, checked_value: 'true', unchecked_value: 'false' %>
           <%= f.label :text_preferences, "Yes, you can text me reminders", class: "form-label" %><br>
@@ -33,6 +33,9 @@
           <%= f.submit "Create User", class: "btn custom-btn1 mr-2" %>
           </div>
         <% end %>
+        <div class="d-grid mt-3">
+          <%= link_to "Sign up with Github", "https://github.com/login/oauth/authorize?client_id=#{Rails.application.credentials.github[:client_id]}&scope=repo", data: { turbo: false }, class: "btn custom-btn1 mr-2" %>
+        </div>
       </div>
     </div>
   </div>

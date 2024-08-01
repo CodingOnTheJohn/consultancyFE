@@ -1,9 +1,4 @@
 <% if current_user %>
-  <p>Logged in as: <%= current_user %></p>
-  <%= button_to "Log out", user_logout_path([:user_id]), method: :delete %>
-<% else %>
-<%= link_to "Login with Github",
-"https://github.com/login/oauth/authorize?client_id=#{Rails.application.credentials.github[:client_id]}&scope=repo", data: { turbo: false } %>
+  <p>Logged in as: <%= @user.username %></p>
+  <%= button_to "Log out", logout_path, method: :delete %>
 <% end %>
-
-
