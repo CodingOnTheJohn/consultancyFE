@@ -28,8 +28,8 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome #{response[:attributes][:username]}"
       redirect_to root_path
     else
-      flash[:error] = "Sorry, your credentials are bad"
-      redirect_to new_user_path
+      flash[:error] = "Sorry, your credentials are bad #{response[:errors]}"
+      redirect_to login_form_path
     end
   end
 

@@ -54,7 +54,10 @@ RSpec.describe 'Create User', type: :feature do
         fill_in :password, with: password
         fill_in :password_confirmation, with: password_confirmation
         
-        click_on "Create User"        
+        click_on "Create User"
+        
+        expect(current_path).to eq(new_user_path)
+        expect(page).to have_content("Sorry, your credentials are bad")
       end
     end
   end
