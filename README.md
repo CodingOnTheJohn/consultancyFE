@@ -64,4 +64,3 @@ currently not licensed
 ## Acknowledgments
 
   - Inspiration from https://github.com/petrovicstefanrs/30_seconds_of_knowledge 
-  - Color Scheme inspired by Montucky Cold Snacks
