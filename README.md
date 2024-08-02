@@ -1,24 +1,67 @@
-# README
+# CodeSnacks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A mobile-friendly website designed to give you "snacks" of code lessons. Each lesson is short enough to digest before bed, or while taking advantage of micro-moments throughout the day.
+Designed for programming students at the start of their journey or preparing for interviews.
 
-Things you may want to cover:
+Current Lessons include: Ruby, JavaScript, Interview Questions
 
-* Ruby version
+Deployed on: https://consultancy-fe-7544dba9595c.herokuapp.com/ 
 
-* System dependencies
+### CodeSnacks Features 
+- Github Oauth integration
+- Basic Auth
+- Lessons Microservice
+- Users Authentication Backend
+- Open AI API integration
+- Texting service to remind you to to have a snack
+- Bootstrap Styling with responsive design
 
-* Configuration
+### Stack
+ - Rails FE
+ - Rails BE (users)
+ - Rails API (lessons)
+ - Redis (text service)
 
-* Database creation
+### API Documentation
+[Docs](https://bump.sh/codesnacks/hub/codesnacks)
 
-* Database initialization
+### Repositories
 
-* How to run the test suite
+- [Frontend](https://github.com/CodingOnTheJohn/consultancyFE)
+- [Backend](https://github.com/CodingOnTheJohn/codingonthejohnBE)
+- [Lessons MicroService](https://github.com/CodingOnTheJohn/codinglessonsapi)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributing
 
-* Deployment instructions
+Please read (TBD) for details on our code of conduct, and the process for submitting pull requests to us.
 
-* ...
+## Versioning
+
+API V1
+
+## Authors
+
+- Noah Durbin
+  - [Github](https://github.com/noahdurbin)
+  - [Linkedin](https://www.linkedin.com/in/noahdurbin/)
+
+- Austin Carr-Jones
+  - [Github](https://github.com/austincarrjones)
+  - [Linkedin](https://www.linkedin.com/in/austin-carr-jones/)
+
+- Dana Howell
+  - [Github](https://github.com/DHowell1150)
+  - [Linkedin](https://www.linkedin.com/in/dana-l-howell/)
+
+- Garrett Bowman
+  - [Github](https://github.com/GBowman1)
+  - [Linkedin](https://www.linkedin.com/in/gbowman3/)
+
+## License
+
+currently not licensed
+
+## Acknowledgments
+
+  - Inspiration from https://github.com/petrovicstefanrs/30_seconds_of_knowledge 
+  - Color Scheme inspired by Montucky Cold Snacks
