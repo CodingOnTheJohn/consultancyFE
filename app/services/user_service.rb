@@ -9,7 +9,11 @@ class UserService
       request.body = { user: params }.to_json
     end
     json = JSON.parse(response.body, symbolize_names: true)
-    json[:data]
+    if response.success?
+      json[:data]
+    else
+      { errors: json[:error_object] }
+    end
   end
 
   def get_user(id)

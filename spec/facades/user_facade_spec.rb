@@ -12,12 +12,13 @@ RSpec.describe UserFacade do
       end
     end
 
-    it "should return hash of user information on successful creation" do 
+    it "should return error hash if unsuccessful" do 
       VCR.use_cassette("create_user_sad") do
         facade = UserFacade.new
         response = facade.create_user({"username"=>"a", "password"=>"test", "email"=>"test4554@example.com", "password_confirmation"=>"t"})
      
-        expect(response).to be nil
+        expect(response).to be_a Hash
+        expect(response[:errors]).to be_a Hash
       end
     end
   end

@@ -12,8 +12,6 @@ RSpec.describe 'User Login', type: :feature do
 
         expect(current_path).to eq(login_form_path)
 
-        # expect(page).to have_link("Login with Github")
-
         fill_in :email, with: "test4554@example.com"
         fill_in :password, with: "test"
         
