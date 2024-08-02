@@ -1,4 +1,5 @@
 # CodeSnacks
+<img width="1254" alt="Screenshot 2024-08-01 at 10 23 42 PM" src="https://github.com/user-attachments/assets/c2556f62-b235-4292-b20d-4c1c7e758916">
 
 A mobile-friendly website designed to give you "snacks" of code lessons. Each lesson is short enough to digest before bed, or while taking advantage of micro-moments throughout the day.
 Designed for programming students at the start of their journey or preparing for interviews.
