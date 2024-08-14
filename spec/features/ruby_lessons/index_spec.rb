@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "Ruby Lessons Index" do
   it "should show a list of ruby lessons by name and link to their show page" do
-    VCR.use_cassette("ruby_index") do
+    # VCR.use_cassette("ruby_index") do
+    VCR.use_cassette("ruby_localhost5000") do
       visit ruby_lessons_path
 
       expect(page).to have_content("Lesson 1")

@@ -3,7 +3,8 @@ class LessonService
   end
 
   def conn
-    conn = Faraday.new(url: "https://codinglessons-112e8fb1f399.herokuapp.com")
+    # conn = Faraday.new(url: "https://codinglessons-112e8fb1f399.herokuapp.com")
+    conn = Faraday.new(url: "http://localhost:5000")
   end
 
   def get_url(url)

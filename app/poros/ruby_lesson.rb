@@ -6,5 +6,6 @@ class RubyLesson
     @lesson = lesson[:attributes][:lesson]
     @topic = lesson[:attributes][:topic]
     @link = lesson[:attributes][:link]
+    # binding.pry
   end
 end
