@@ -1,5 +1,5 @@
 class LessonsFacade
-  def initialize(lesson_type)
+  def initialize(lesson_type = nil)
     @lesson_type = lesson_type
   end
 
@@ -10,7 +10,7 @@ class LessonsFacade
   end
 
   def detail(id)
-    lesson = LessonService.new.lesson_detail(@lesson_type, id.to_i)
+    lesson = LessonService.new.lesson_detail(id.to_i)
     Lesson.new(lesson)
   end
 end

@@ -7,9 +7,8 @@ class LessonsController < ApplicationController
   end
 
   def show
-    binding.pry
     @topic = "#{@lesson_type.capitalize} Lesson"
-    @lesson = LessonsFacade.new(@lesson_type).detail(params[:id])
+    @lesson = LessonsFacade.new.detail(params[:id])
     @formatted_lesson = markdown_to_html(@lesson.lesson)
     render "shared/lesson_show"
   end
