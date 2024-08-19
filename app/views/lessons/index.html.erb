@@ -6,7 +6,7 @@
       <div class="list-group">
         <% @lessons.each do |lesson| %>
           <%= link_to lesson_path(type: @lesson_type, id: lesson.id), class: "list-group-item list-group-item-action d-flex justify-content-between align-items-center" do %>
-            <span>Lesson <%= lesson.id %>: <%= lesson.topic %></span>
+            <span>Lesson: <%= lesson.topic %></span>
           <% end %>
         <% end %>
       </div>

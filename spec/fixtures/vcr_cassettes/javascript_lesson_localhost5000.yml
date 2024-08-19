@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/lessons?type=javascript
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"b8d99887165831d9e90f982be835bc7d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 82a3ebb8-5439-4b0e-8e6a-eccf479ea0f5
+      X-Runtime:
+      - '0.016541'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=11.30,
+        instantiation.active_record;dur=0.04, process_action.action_controller;dur=12.37
+      Content-Length:
+      - '2117'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"4","type":"lesson","attributes":{"lesson":"Objects
+        are used to store collections of data and more complex entities. They are
+        created using curly braces `{}` and can contain properties. The `person` object
+        below has three properties: name, age, and height. Properties can be accessed
+        using dot notation or bracket notation.\n  ```\n  let person = {\n    name:
+        ''Alice'',\n    age: 30,\n    height: 5.6\n    };\n    \n  console.log(person.name);
+        // ''Alice''\n  console.log(person[''age'']); // 30\n  ```\n\n  To add or
+        update a property, you can simply assign a value to it.\n\n  `person.city
+        = ''New York''; // Add a new property`\n\n  `person.age = 31; // Update an
+        existing property`","topic":"Objects","link":"https://www.example.com/javascript_lessons/1","lesson_type":"javascript"}},{"id":"5","type":"lesson","attributes":{"lesson":"Functions
+        are reusable blocks of code that perform a specific task. They are defined
+        using the function keyword followed by the function name and parentheses.
+        The code block is enclosed in curly braces.\n  ```\n  function greet(name)
+        {\n    return ''Hello, '' + name + ''!'';\n    }\n  ```\n  The function greet
+        takes a name as an argument and returns a greeting message. Functions can
+        take multiple arguments and return a value.\n  \n  `let result = greet(''Alice'');
+        // ''Hello, Alice!''`","topic":"Functions","link":"https://www.example.com\n  _lessons/1","lesson_type":"javascript"}},{"id":"6","type":"lesson","attributes":{"lesson":"Conditional
+        statements allow us to execute different code based on different conditions.\n  ```\n  let
+        number = 10;\n\n  if (number \u003e 5) {\n    console.log(''The number is
+        greater than 5.'');\n  } else if (number === 5) {\n    console.log(''The number
+        is equal to 5.'');\n  } else {\n    console.log(''The number is less than
+        5.'');\n  }\n  ```\n  Conditions are checked in order, and the first true
+        condition executes its block.\n  `===` checks for strict equality, `\u003e`
+        and `\u003c` for greater or lesser comparisons.","topic":"Conditional Statements","link":"https://www.example.com/javascript_lessons/1","lesson_type":"javascript"}}]}'
+  recorded_at: Mon, 19 Aug 2024 21:24:39 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/lessons/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"5ef3a4bba82d5562f5b52f24e00f9612"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - edf6bd9e-b1bc-4ed5-a806-824585382e44
+      X-Runtime:
+      - '0.005001'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.22, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.07
+      Content-Length:
+      - '795'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"4","type":"lesson","attributes":{"lesson":"Objects are
+        used to store collections of data and more complex entities. They are created
+        using curly braces `{}` and can contain properties. The `person` object below
+        has three properties: name, age, and height. Properties can be accessed using
+        dot notation or bracket notation.\n  ```\n  let person = {\n    name: ''Alice'',\n    age:
+        30,\n    height: 5.6\n    };\n    \n  console.log(person.name); // ''Alice''\n  console.log(person[''age'']);
+        // 30\n  ```\n\n  To add or update a property, you can simply assign a value
+        to it.\n\n  `person.city = ''New York''; // Add a new property`\n\n  `person.age
+        = 31; // Update an existing property`","topic":"Objects","link":"https://www.example.com/javascript_lessons/1","lesson_type":"javascript"}}}'
+  recorded_at: Mon, 19 Aug 2024 21:24:40 GMT
+recorded_with: VCR 6.2.0
