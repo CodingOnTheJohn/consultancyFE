@@ -1,22 +1,32 @@
-class RubyLessonsController < ApplicationController
+class LessonsController < ApplicationController
+  before_action :set_user
+  before_action :set_lesson_type
+
   def index
-    @user = UserFacade.new.get_user(session[:user_id]) if session[:user_id]
-    @ruby_lessons = RubyLessonsFacade.new.all
+    @lessons = LessonsFacade.new(@lesson_type).all
   end
 
   def show
-    @user = UserFacade.new.get_user(session[:user_id]) if session[:user_id]
-    @topic = "Ruby Lesson"
-    @lesson = RubyLessonsFacade.new.detail(params[:id])
+    binding.pry
+    @topic = "#{@lesson_type.capitalize} Lesson"
+    @lesson = LessonsFacade.new(@lesson_type).detail(params[:id])
     @formatted_lesson = markdown_to_html(@lesson.lesson)
     render "shared/lesson_show"
   end
-
+  
   def get_ai_response
     @response = OpenAiFacade.new.get_response(params[:id])
   end
 
   private
+
+  def set_user
+    @user = UserFacade.new.get_user(session[:user_id]) if session[:user_id]
+  end
+
+  def set_lesson_type
+    @lesson_type = params[:type]
+  end
 
   def markdown_to_html(content)
     renderer = Redcarpet::Render::HTML.new

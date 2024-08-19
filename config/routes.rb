@@ -17,8 +17,9 @@ Rails.application.routes.draw do
     get "/dashboard", to: "users#dashboard"
   end
 
-  resources :ruby_lessons, only: [:index, :show]
-  resources :javascript_lessons, only: [:index, :show]
-  resources :interview_lessons, only: [:index, :show]
+  resources :lessons, only: [:index, :show]
+  # resources :ruby_lessons, only: [:index, :show]
+  # resources :javascript_lessons, only: [:index, :show]
+  # resources :interview_lessons, only: [:index, :show]
   post "/openai" => "openai#tell_me_more", as: :openai
 end

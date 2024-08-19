@@ -33,29 +33,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"856434a5951d92f554c2009ee5d326dc"
+      - W/"b02f7aef30c5f7102e89fc83a182b980"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a25ff802-9bd4-4e6a-b12a-6baeb4119c97
+      - 4db129b5-ba4b-41b4-85aa-8713637a856f
       X-Runtime:
-      - '0.116663'
+      - '0.089005'
       Server-Timing:
-      - sql.active_record;dur=29.88, start_processing.action_controller;dur=0.00,
-        instantiation.active_record;dur=15.41, process_action.action_controller;dur=65.79
+      - sql.active_record;dur=44.26, start_processing.action_controller;dur=0.00,
+        instantiation.active_record;dur=7.76, process_action.action_controller;dur=30.94
       Content-Length:
-      - '2118'
+      - '2117'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"lesson","attributes":{"lesson":"## Arrays:\n  Arrays
         are ordered lists that are comma seperated and enclosed in square brackets.
         Arrays can contain different data types (integer, string, hash, array). You
         can mix data types in arrays but it is not recommended.\n  `fruits = [''apple'',
-        ''banana'', ''cherry'']`\n  ### Accessing elements using index:\n  Since arrays
+        ''banana'', ''cherry'']`\n  **Accessing elements using index:**\n  Since arrays
         are integer-indexed, you can use this syntax to access particular elements:\n  ```\n  puts
         fruits[0]  # Outputs ''apple''\n  puts fruits[1]  # Outputs ''banana''\n  puts
-        fruits[2]  # Outputs ''cherry''\n  ```\n  ### Adding an element with the shovel
-        operator:\n  `fruits \u003c\u003c ''date''`\n  `puts fruits # Outputs [''apple'',
+        fruits[2]  # Outputs ''cherry''\n  ```\n **Adding an element with the shovel
+        operator:**\n  `fruits \u003c\u003c ''date''`\n  `puts fruits # Outputs [''apple'',
         ''banana'', ''cherry'', ''date'']`","topic":"Data Types","link":"https://ruby-doc.org/core-2.7.0/Array.html"}},{"id":"2","type":"lesson","attributes":{"lesson":"Conditional
         Statements:\n  Conditional statements allow us to execute different code based
         on different conditions.\n  example:\n  number = 5\n  if number \u003e 5\n    puts
@@ -71,7 +71,7 @@ http_interactions:
         = {name: ''Alice'', age: 30}\n  hash.each do |key, value|\n    puts key\n    puts
         value\n  end\n  the line ''puts key'' will output the key and ''puts value''
         will output the value for each key-value pair in the hash.","topic":"iterating","link":"https://ruby-doc.org/core-2.7.0/Enumerable.html#method-i-each"}}]}'
-  recorded_at: Tue, 13 Aug 2024 23:05:28 GMT
+  recorded_at: Wed, 14 Aug 2024 02:39:44 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/ruby/1
@@ -105,29 +105,29 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"c4d17d6c828205d97bf8e1ea799be550"
+      - W/"3a4fc5159d62a761ee49ca36a4b9f983"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9e056f0e-1c09-4e06-ac3a-fb28a6c38407
+      - 21546dc6-c3e0-4bb2-a847-a59e4f150110
       X-Runtime:
-      - '0.006696'
+      - '0.007094'
       Server-Timing:
-      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.38, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.92
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.55, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=3.41
       Content-Length:
-      - '813'
+      - '812'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"lesson","attributes":{"lesson":"## Arrays:\n  Arrays
         are ordered lists that are comma seperated and enclosed in square brackets.
         Arrays can contain different data types (integer, string, hash, array). You
         can mix data types in arrays but it is not recommended.\n  `fruits = [''apple'',
-        ''banana'', ''cherry'']`\n  ### Accessing elements using index:\n  Since arrays
+        ''banana'', ''cherry'']`\n  **Accessing elements using index:**\n  Since arrays
         are integer-indexed, you can use this syntax to access particular elements:\n  ```\n  puts
         fruits[0]  # Outputs ''apple''\n  puts fruits[1]  # Outputs ''banana''\n  puts
-        fruits[2]  # Outputs ''cherry''\n  ```\n  ### Adding an element with the shovel
-        operator:\n  `fruits \u003c\u003c ''date''`\n  `puts fruits # Outputs [''apple'',
+        fruits[2]  # Outputs ''cherry''\n  ```\n **Adding an element with the shovel
+        operator:**\n  `fruits \u003c\u003c ''date''`\n  `puts fruits # Outputs [''apple'',
         ''banana'', ''cherry'', ''date'']`","topic":"Data Types","link":"https://ruby-doc.org/core-2.7.0/Array.html"}}}'
-  recorded_at: Tue, 13 Aug 2024 23:05:29 GMT
+  recorded_at: Wed, 14 Aug 2024 02:39:46 GMT
 recorded_with: VCR 6.2.0

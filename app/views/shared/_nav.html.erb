@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-           <%= link_to "Ruby", ruby_lessons_path, class: "nav-link active", aria: { current: "page" } %>
+           <%= link_to "Ruby", lessons_path(type: "ruby"), class: "nav-link active", aria: { current: "page" } %>
         </li>
         <li class="nav-item">
-          <%= link_to "JavaScript", javascript_lessons_path, class: "nav-link active", aria: { current: "page" } %>
+          <%= link_to "JavaScript", lessons_path(type: "javascript"), class: "nav-link active", aria: { current: "page" } %>
         </li>
         <li class="nav-item">
-          <%= link_to "Interview Questions", interview_lessons_path, class: "nav-link active", aria: { current: "page" } %>
+          <%= link_to "Interview Questions", lessons_path(type: "interview"), class: "nav-link active", aria: { current: "page" } %>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
