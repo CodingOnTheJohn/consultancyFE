@@ -128,6 +128,8 @@ GEM
     ffi (1.17.0-x86-linux-gnu)
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
+    font-awesome-sass (6.5.2)
+      sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.1.0)
@@ -336,6 +338,7 @@ DEPENDENCIES
   capybara
   debug
   faraday
+  font-awesome-sass
   importmap-rails
   jbuilder
   launchy
