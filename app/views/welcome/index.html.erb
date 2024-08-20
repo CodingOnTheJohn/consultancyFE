@@ -23,17 +23,17 @@
     <div class="col-md-4 text-center mb-4">
       <h3>Ruby</h3>
       <p>Master the elegant syntax of Ruby</p>
-      <%= link_to "Start Learning Ruby", ruby_lessons_path, class: "btn custom-btn1" %>
+      <%= link_to "Start Learning Ruby", lessons_path(type: "ruby"), class: "btn custom-btn1" %>
     </div>
     <div class="col-md-4 text-center mb-4">
       <h3>JavaScript</h3>
       <p>Dive into the world of interactive web development</p>
-      <%= link_to "Explore JavaScript", javascript_lessons_path, class: "btn custom-btn1" %>
+      <%= link_to "Explore JavaScript", lessons_path(type: "javascript"), class: "btn custom-btn1" %>
     </div>
     <div class="col-md-4 text-center mb-4">
       <h3>Interview Questions</h3>
       <p>Prepare for your next coding interview</p>
-      <%= link_to "Practice Questions", interview_lessons_path, class: "btn custom-btn1" %>
+      <%= link_to "Practice Questions", lessons_path(type: "interview"), class: "btn custom-btn1" %>
     </div>
   </div>
 </div>

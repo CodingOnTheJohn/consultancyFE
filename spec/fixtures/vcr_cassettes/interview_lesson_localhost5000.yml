@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/lessons?type=interview
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"a2ad35e7c58a47fd9e5d61c6eba76ab7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9406e67b-1244-45da-b55c-c4a83d2e4e60
+      X-Runtime:
+      - '0.027228'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.79, instantiation.active_record;dur=0.44,
+        process_action.action_controller;dur=19.86
+      Content-Length:
+      - '772'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"lesson","attributes":{"lesson":"Explain
+        the following Data Types: `String, Integer, Float, Boolean, Array, Hash`","topic":"Data
+        Types","link":"https://backend.turing.edu/module1/lessons/datatypes","lesson_type":"interview"}},{"id":"2","type":"lesson","attributes":{"lesson":"What
+        is the differnce between a `.map` and a `.each` method in Ruby?","topic":"Enumerables","link":"https://medium.com/@abhishektanwar9596/what-is-the-difference-between-map-and-each-in-ruby-1f2fbb5d5842","lesson_type":"interview"}},{"id":"3","type":"lesson","attributes":{"lesson":"What
+        is polymorphism in Object Oriented Programming?","topic":"Polymorphism","link":"https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7","lesson_type":"interview"}}]}'
+  recorded_at: Mon, 19 Aug 2024 21:23:33 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/lessons/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"f15ebb5967c8d7f055db6b4c8dc588c0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 83b9f839-e601-4fcb-a399-f027cf02d5cd
+      X-Runtime:
+      - '0.004266'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.32, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.05
+      Content-Length:
+      - '251'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"lesson","attributes":{"lesson":"Explain the
+        following Data Types: `String, Integer, Float, Boolean, Array, Hash`","topic":"Data
+        Types","link":"https://backend.turing.edu/module1/lessons/datatypes","lesson_type":"interview"}}}'
+  recorded_at: Mon, 19 Aug 2024 21:23:34 GMT
+recorded_with: VCR 6.2.0

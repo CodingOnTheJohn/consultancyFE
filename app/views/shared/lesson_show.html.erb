@@ -12,7 +12,7 @@
 
           <div class="mb-4">
             <h5 class="text-muted">Lesson Content</h5>
-            <p><%= @lesson.lesson %></p>
+            <%= @formatted_lesson.html_safe %>
           </div>
 
           <div class="mb-4">

@@ -1,10 +1,11 @@
-class JavascriptLesson
-  attr_reader :id, :lesson, :topic, :link
+class Lesson
+  attr_reader :id, :lesson, :topic, :link, :lesson_type
 
   def initialize(lesson)
     @id = lesson[:id]
     @lesson = lesson[:attributes][:lesson]
     @topic = lesson[:attributes][:topic]
     @link = lesson[:attributes][:link]
+    @lesson_type = lesson[:attributes][:lesson_type]
   end
 end

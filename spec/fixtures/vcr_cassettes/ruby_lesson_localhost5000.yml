@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/lessons?type=ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"dca094e71abcf598295b294701d4c418"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e5533df8-5720-47fa-9402-3554a61f09f1
+      X-Runtime:
+      - '0.006281'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.16, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.15
+      Content-Length:
+      - '2179'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"lesson","attributes":{"lesson":"Arrays are
+        ordered lists that are comma seperated and enclosed in square brackets. Arrays
+        can contain different data types (integer, string, hash, array). You can mix
+        data types in arrays but it is not recommended.\n  \n  `fruits = [''apple'',
+        ''banana'', ''cherry'']`\n\n  **Accessing elements using index:**\n  Since
+        arrays are integer-indexed, you can use this syntax to access particular elements:\n  ```\n  puts
+        fruits[0]  # Outputs ''apple''\n  puts fruits[1]  # Outputs ''banana''\n  puts
+        fruits[2]  # Outputs ''cherry''\n  ```\n **Adding an element with the shovel
+        operator:**\n\n  `fruits \u003c\u003c ''date''`\n  \n  `puts fruits # Outputs
+        [''apple'', ''banana'', ''cherry'', ''date'']`","topic":"Arrays","link":"https://ruby-doc.org/core-2.7.0/Array.html","lesson_type":"ruby"}},{"id":"8","type":"lesson","attributes":{"lesson":"Conditional
+        statements allow us to execute different code based on different conditions.\n  example:\n  ```\n  number
+        = 5\n  if number \u003e 5\n    puts ''The number is greater than 5.''\n  elsif
+        number == 5\n    puts ''The number is equal to 5.''\n  else\n    puts ''The
+        number is less than 5.''\n  end\n  ```\n  Conditions are checked in order,
+        and the first true condition executes its block.","topic":"Conditional Statements","link":"https://www.rubyguides.com/ruby-tutorial/ruby-if-else/","lesson_type":"ruby"}},{"id":"9","type":"lesson","attributes":{"lesson":"The
+        `.each` method is an enumerable method that allows you to iterate over each
+        element in an array or hash.\n  example:\n  ```\n  fruits = [''apple'', ''banana'',
+        ''cherry'']\n  fruits.each do |fruit|\n    puts fruit\n  end\n  ```\n  The
+        line `puts fruit` will be executed for each element in the array, the `|fruit|`
+        is a block variable that represents the current element in the iteration.\n  ```\n  hash
+        = {name: ''Alice'', age: 30}\n\n  hash.each do |key, value|\n    puts key\n    puts
+        value\n  end\n  ```\n  The line `puts key` will output the key and `puts value`
+        will output the value for each key-value pair in the hash.","topic":"Iterating","link":"https://ruby-doc.org/core-2.7.0/Enumerable.html#method-i-each","lesson_type":"ruby"}}]}'
+  recorded_at: Mon, 19 Aug 2024 21:21:18 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/lessons/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"a5278a2d6b91acf682937801a729b249"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c1469d00-e73a-40db-ad98-5baf2353d70a
+      X-Runtime:
+      - '0.006840'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.00, sql.active_record;dur=0.24, instantiation.active_record;dur=0.07,
+        process_action.action_controller;dur=1.51
+      Content-Length:
+      - '827'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"lesson","attributes":{"lesson":"Arrays are
+        ordered lists that are comma seperated and enclosed in square brackets. Arrays
+        can contain different data types (integer, string, hash, array). You can mix
+        data types in arrays but it is not recommended.\n  \n  `fruits = [''apple'',
+        ''banana'', ''cherry'']`\n\n  **Accessing elements using index:**\n  Since
+        arrays are integer-indexed, you can use this syntax to access particular elements:\n  ```\n  puts
+        fruits[0]  # Outputs ''apple''\n  puts fruits[1]  # Outputs ''banana''\n  puts
+        fruits[2]  # Outputs ''cherry''\n  ```\n **Adding an element with the shovel
+        operator:**\n\n  `fruits \u003c\u003c ''date''`\n  \n  `puts fruits # Outputs
+        [''apple'', ''banana'', ''cherry'', ''date'']`","topic":"Arrays","link":"https://ruby-doc.org/core-2.7.0/Array.html","lesson_type":"ruby"}}}'
+  recorded_at: Mon, 19 Aug 2024 21:21:19 GMT
+recorded_with: VCR 6.2.0
