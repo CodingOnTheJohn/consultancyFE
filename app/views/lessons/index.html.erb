@@ -11,8 +11,10 @@
                 <div class="icon-container mr-3 ">
                   <% if params[:type] == "javascript" %>
                     <i class="fa-brands fa-js fa-3x" style="color: #ee6826;"></i>
+                  <% elsif params[:type] == "ruby" %>
+                    <i class="fa-regular fa-gem fa-rotate-by fa-2xl" style="color: #ee6826; --fa-rotate-angle: 320deg;"></i>
                   <% else %>
-                    <i class="fa-solid fa-book fa-3x" style="color: #6c757d;"></i>
+                    <i class="fa-solid fa-code fa-xl" style="color: #e66826;"></i>
                   <% end %>
                 </div>
                 <div class="ms-3">
@@ -24,8 +26,10 @@
                   <p class="card-text">
                     <% if params[:type] == "javascript" %>
                       <span> Learn <%= lesson.topic %> in JavaScript</span>
+                    <% elsif params[:type] == "ruby" %>
+                      <span> Learn <%= lesson.topic %> in Ruby</span>
                     <% else %>
-                      <%= lesson.title %>
+                      <span> Practice <%= lesson.topic %> interview questions</span>
                     <% end %>
                   </p>
                 </div>
