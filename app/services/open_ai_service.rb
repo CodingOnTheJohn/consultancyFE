@@ -7,7 +7,7 @@ class OpenAiService
 
   def tell_me_more(lesson, topic)
     Rails.cache.fetch("openai_response_#{lesson}_#{topic}", expires_in: 1.week) do
-      prompt = "Tell me about #{lesson} as a small #{topic} like I know very little of the topic in under 250 words. please give me the response in json and only json format. do not include any other information. only a JSON object, do not put it in an array, in quotes or anything else.I want the json object to have the key data with only description nested under data"
+      prompt = "Tell me about #{lesson} as a small #{topic} like I know very little of the topic in under 250 words. please give me the response in json and only json format. do not include any other information. only a JSON object, do not put it in an array, in quotes or anything else. I want the json object to have the key data with only description nested under data. I want the data to be in markdown format. my response should be in markdown format, and should only be able to parse with these rules autolink: true, tables: true, fenced_code_blocks: true, strikethrough: true, superscript: true, underline: true, highlight: true, quote: true, footnotes: true, lax_spacing: true"
       client = OpenAI::Client.new
       response = client.chat(
         parameters: {
