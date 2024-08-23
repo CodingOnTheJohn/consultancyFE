@@ -1,6 +1,6 @@
 class UserService
   def conn
-    Faraday.new("http://localhost:5000")
+    Faraday.new("https://coding-on-the-john-be-e2b03178993f.herokuapp.com")
   end
 
   def create_user(params)
