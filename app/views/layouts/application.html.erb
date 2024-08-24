@@ -11,14 +11,16 @@
   </head>
 
   <body>
-    <div class="body wrapper">
+    <div class="wrapper d-flex flex-column flex-grow-1">
       <%= render partial: "shared/nav" %>
       <% flash.each do |type, message| %>
         <section class=<%= type %>>
         <p><%= message %></p>
         </section>
       <% end %>
-      <%= yield %>
+      <div class="flex-grow-1">
+        <%= yield %>
+      </div>
     </div>
     <%= render 'shared/footer' %>
   </body>
