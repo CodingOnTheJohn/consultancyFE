@@ -77,9 +77,22 @@
 
 }
 
-.body {
-  flex: 1;
-  height: 90dvh;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ensures the wrapper takes up at least the full viewport height */
+}
+
+.flex-grow-1 {
+  flex-grow: 1; /* Ensures that the content area expands to fill any available space */
 }
 
 .footer {
@@ -141,8 +154,3 @@
   color: #333333;
 }
 
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
